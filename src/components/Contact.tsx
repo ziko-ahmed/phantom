@@ -47,6 +47,14 @@ const Contact = () => {
             >
               LeetCode <MdArrowOutward />
             </a>
+            <a
+              href="https://www.codeforces.com/profile/ziko-ahmed/"
+              target="_blank"
+              data-cursor="disable"
+              className="contact-social"
+            >
+              Codeforces <MdArrowOutward />
+            </a>
           </div>
           <div className="contact-box">
             <h2>

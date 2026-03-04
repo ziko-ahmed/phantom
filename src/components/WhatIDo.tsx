@@ -92,6 +92,9 @@ const WhatIDo = () => {
               <p>
                 Advanced AI solutions including NLP, computer vision, and deep learning models using TensorFlow and PyTorch. Data preprocessing, visualization, and predictive modeling using Python and advanced ML frameworks.
               </p>
+              <div className="what-arrow"></div>
+            </div>
+            <div className="what-content-expandable">
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
                 <div className="what-tags">Python</div>
@@ -104,7 +107,6 @@ const WhatIDo = () => {
                 <div className="what-tags">Streamlit</div>
                 <div className="what-tags">MATLAB</div>
               </div>
-              <div className="what-arrow"></div>
             </div>
           </div>
           <div
@@ -129,8 +131,11 @@ const WhatIDo = () => {
               <h3>FULL STACK</h3>
               <h4>Description</h4>
               <p>
-                Modern web and cross-platform mobile applications with responsive design, robust backend APIs, and seamless database integration.
+                Modern web and cross-platform mobile applications (iOS, Android and Web) with responsive design, robust backend APIs, and seamless database integration.
               </p>
+              <div className="what-arrow"></div>
+            </div>
+            <div className="what-content-expandable">
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
                 <div className="what-tags">Java</div>
@@ -143,7 +148,6 @@ const WhatIDo = () => {
                 <div className="what-tags">MongoDB</div>
                 <div className="what-tags">PostgreSQL</div>
               </div>
-              <div className="what-arrow"></div>
             </div>
           </div>
         </div>

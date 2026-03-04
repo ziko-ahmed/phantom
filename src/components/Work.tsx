@@ -132,7 +132,7 @@ const Work = () => {
               <h4>Tools and features</h4>
               <p>Python, PostgreSQL, Redis, APIs</p>
             </div>
-            <WorkImage image="/images/placeholder.webp" alt="FinanceAI Assistant" />
+            <WorkImage image="src/assets/images/Rayibot.png" alt="FinanceAI Assistant" />
           </div>
           <div className="work-box">
             <div className="work-info">
@@ -146,7 +146,7 @@ const Work = () => {
               <h4>Tools and features</h4>
               <p>Python, TensorFlow, OpenCV, MediaPipe</p>
             </div>
-            <WorkImage image="/images/placeholder.webp" alt="ASL Detection" />
+            <WorkImage image="src/assets/images/ASL.png" alt="ASL Detection" />
           </div>
           <div className="work-box">
             <div className="work-info">
@@ -160,7 +160,7 @@ const Work = () => {
               <h4>Tools and features</h4>
               <p>React, Node.js, MongoDB, WebSockets, Tailwind CSS</p>
             </div>
-            <WorkImage image="/images/placeholder.webp" alt="Primetrade" />
+            <WorkImage image="src/assets/images/primetrade.png" alt="Primetrade" />
           </div>
           <div className="work-box">
             <div className="work-info">
@@ -174,7 +174,7 @@ const Work = () => {
               <h4>Tools and features</h4>
               <p>MERN Stack, Express, React, Node.js, MongoDB</p>
             </div>
-            <WorkImage image="/images/placeholder.webp" alt="DRAKZ" />
+            <WorkImage image="src/assets/images/DRAKZ.png" alt="DRAKZ" />
           </div>
           <div className="work-box">
             <div className="work-info">
@@ -188,7 +188,7 @@ const Work = () => {
               <h4>Tools and features</h4>
               <p>Python, Streamlit, Pandas, Scikit-learn</p>
             </div>
-            <WorkImage image="/images/placeholder.webp" alt="Movie Recommender" />
+            <WorkImage image="src/assets/images/Movie-Recommender.png" alt="Movie Recommender" />
           </div>
           <div className="work-box">
             <div className="work-info">
@@ -202,7 +202,7 @@ const Work = () => {
               <h4>Tools and features</h4>
               <p>Python, BeautifulSoup, Selenium, Pandas</p>
             </div>
-            <WorkImage image="/images/placeholder.webp" alt="Trend Scrapper" />
+            <WorkImage image="src/assets/images/trend_scrapper.png" alt="Trend Scrapper" />
           </div>
           <div className="work-box">
             <div className="work-info">
@@ -216,7 +216,7 @@ const Work = () => {
               <h4>Tools and features</h4>
               <p>Python, Streamlit, NLP, Scikit-learn</p>
             </div>
-            <WorkImage image="/images/placeholder.webp" alt="Healthcare Chatbot" />
+            <WorkImage image="src/assets/images/HealthBot.png" alt="Healthcare Chatbot" />
           </div>
           <div className="work-box">
             <div className="work-info">
@@ -230,7 +230,7 @@ const Work = () => {
               <h4>Tools and features</h4>
               <p>Python, TensorFlow, Scikit-learn, NLTK</p>
             </div>
-            <WorkImage image="/images/placeholder.webp" alt="AI vs Human Text Classification" />
+            <WorkImage image="src/assets/images/AI_vs_Human.png" alt="AI vs Human Text Classification" />
           </div>
           <div className="work-box">
             <div className="work-info">
@@ -244,7 +244,7 @@ const Work = () => {
               <h4>Tools and features</h4>
               <p>React, Next.js, Tailwind CSS, Vercel</p>
             </div>
-            <WorkImage image="/images/placeholder.webp" alt="EI & DS Lab Website" />
+            <WorkImage image="src/assets/images/EIDS.png" alt="EI & DS Lab Website" />
           </div>
           <div className="work-box">
             <div className="work-info">
@@ -258,7 +258,7 @@ const Work = () => {
               <h4>Tools and features</h4>
               <p>HTML, CSS, JavaScript, React</p>
             </div>
-            <WorkImage image="/images/placeholder.webp" alt="Restaurant App" />
+            <WorkImage image="src/assets/images/restaurant_app.png" alt="Restaurant App" />
           </div>
         </div>
       </div>

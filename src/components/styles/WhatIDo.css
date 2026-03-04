@@ -34,32 +34,31 @@
 }
 .what-box-in {
   flex-direction: column;
-  height: 500px;
   margin-left: 200px;
   position: relative;
   display: none;
 }
 .what-content {
   width: 450px;
-  height: 33%;
-  min-height: 50%;
-  transition: 0.5s;
-  /* border: 0.5px dashed rgba(255, 255, 255, 0.3); */
   position: relative;
   padding: 50px;
   box-sizing: border-box;
+  display: grid;
+  grid-template-rows: min-content 0fr;
+  transition: grid-template-rows 0.5s ease, padding 0.5s;
+  overflow: hidden;
 }
 
 .what-noTouch:hover,
 .what-content-active {
-  min-height: 67%;
-  padding: 40px 50px;
+  grid-template-rows: min-content 1fr;
+  padding: 30px 50px 70px 50px;
 }
 
 .what-noTouch:hover ~ .what-content,
 .what-box-in:hover .what-noTouch:not(:hover),
 .what-content.what-sibling {
-  min-height: 33%;
+  grid-template-rows: min-content 0fr;
   padding: 10px 50px;
 }
 .what-content h3 {
@@ -68,10 +67,11 @@
   margin: 0;
 }
 .what-content p {
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: 200;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
   letter-spacing: 0.7px;
+  margin-bottom: 25px;
 }
 .what-content h4 {
   font-weight: 300;
@@ -99,6 +99,12 @@
   100% {
     opacity: 1;
   }
+}
+.what-content-expandable {
+  min-height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 .what-content::before,
 .what-corner::before,
@@ -142,6 +148,13 @@
   border-left: none;
   border-top: none;
 }
+.what-corner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 .what-arrow {
   position: absolute;
   bottom: 20px;
@@ -184,6 +197,7 @@
   left: 50%;
   transform: translateX(-50%);
   width: 450px;
+  max-height: calc(100% - 2px);
 }
 .what-border2 {
   position: absolute;
@@ -199,21 +213,29 @@
   animation: whatBorders 1.2s 1 forwards;
 }
 .what-border2 svg {
-  height: 500px;
+  height: calc(100% - 2px);
   top: 50%;
   transform: translateY(-50%);
   position: absolute;
 }
-.what-content-in {
-  height: 100%;
-  overflow: hidden;
+.what-content-expandable h5,
+.what-content-expandable .what-content-flex {
+  opacity: 0;
+  transition: opacity 0.3s;
 }
-.what-content-in h5 {
+.what-noTouch:hover .what-content-expandable h5,
+.what-content-active .what-content-expandable h5,
+.what-noTouch:hover .what-content-expandable .what-content-flex,
+.what-content-active .what-content-expandable .what-content-flex {
+  opacity: 1;
+  transition-delay: 0.2s;
+}
+.what-content-expandable h5 {
   font-weight: 300;
   opacity: 0.5;
   font-size: 12px;
   letter-spacing: 1px;
-  font-family: "Geist", sans-serif;
+  font-family: "Rajdhani", sans-serif;
   margin-bottom: 5px;
 }
 @keyframes whatBorders {
@@ -232,9 +254,9 @@
   flex-wrap: wrap;
 }
 .what-tags {
-  font-size: 13px;
-  font-weight: 400;
-  padding: 2px 7px;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 4px 10px;
   background-color: rgba(255, 255, 255, 0.15);
   border: 1px solid #ffffff50;
   border-radius: 30px;
@@ -248,9 +270,7 @@
   .what-box h2 {
     margin-right: 20%;
   }
-  .what-box-in {
-    height: 400px;
-  }
+
   .what-content h3 {
     font-size: 28px;
   }
@@ -290,7 +310,6 @@
     padding-bottom: 50px;
   }
   .what-box-in {
-    height: 500px;
     margin-left: -50px;
   }
   .what-content {
@@ -302,14 +321,14 @@
   }
   .what-noTouch:hover,
   .what-content-active {
-    min-height: 67%;
-    padding: 50px;
+    grid-template-rows: min-content 1fr;
+    padding: 30px 50px 70px 50px;
   }
 
   .what-noTouch:hover ~ .what-content,
   .what-box-in:hover .what-noTouch:not(:hover),
   .what-content.what-sibling {
-    min-height: 33%;
+    grid-template-rows: min-content 0fr;
     padding: 10px 50px;
   }
 }
@@ -325,9 +344,7 @@
   .what-box:first-child {
     justify-content: left;
   }
-  .what-box:last-child {
-    height: 500px;
-  }
+
   .what-box {
     width: 500px;
     max-width: calc(100% - 50px);
@@ -338,7 +355,6 @@
   }
   .what-box-in {
     margin-left: 0px;
-    height: 450px;
   }
   .what-content h5,
   .what-content-flex {
