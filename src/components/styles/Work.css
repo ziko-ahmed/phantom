@@ -37,6 +37,11 @@
   flex-shrink: 0;
   gap: 50px;
   justify-content: start;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.work-box:hover {
+  background: rgba(255, 255, 255, 0.03);
 }
 .work-flex .work-box:nth-child(even) {
   flex-direction: column-reverse;

@@ -1,0 +1,341 @@
+.overlay-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: rgba(5, 5, 5, 0.92);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  animation: overlayFadeIn 0.35s ease forwards;
+  padding: 40px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+@keyframes overlayFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.overlay-backdrop.overlay-closing {
+  animation: overlayFadeOut 0.25s ease forwards;
+}
+
+@keyframes overlayFadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Main Panel */
+.overlay-panel {
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  background: rgba(15, 15, 15, 0.95);
+  padding: 50px;
+  box-sizing: border-box;
+  display: flex;
+  gap: 40px;
+  opacity: 0;
+  transform: scale(0.96) translateY(10px);
+  animation: panelSlideIn 0.4s ease 0.1s forwards;
+}
+
+@keyframes panelSlideIn {
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.overlay-closing .overlay-panel {
+  animation: panelSlideOut 0.2s ease forwards;
+}
+
+@keyframes panelSlideOut {
+  to {
+    opacity: 0;
+    transform: scale(0.96) translateY(10px);
+  }
+}
+
+/* Corner decorations to match the site */
+.overlay-panel::before,
+.overlay-panel::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  border: 3px solid #fff;
+}
+
+.overlay-panel::before {
+  top: -2px;
+  left: -2px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.overlay-panel::after {
+  bottom: -2px;
+  right: -2px;
+  border-left: none;
+  border-top: none;
+}
+
+.overlay-corner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.overlay-corner::before,
+.overlay-corner::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  border: 3px solid #fff;
+}
+
+.overlay-corner::before {
+  top: -2px;
+  right: -2px;
+  border-left: none;
+  border-bottom: none;
+}
+
+.overlay-corner::after {
+  bottom: -2px;
+  left: -2px;
+  border-top: none;
+  border-right: none;
+}
+
+/* Close button */
+.overlay-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  z-index: 10;
+}
+
+.overlay-close:hover {
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Image side */
+.overlay-image {
+  flex-shrink: 0;
+  width: 300px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.overlay-image img {
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Content side */
+.overlay-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-width: 0;
+}
+
+.overlay-header {
+  display: flex;
+  align-items: baseline;
+  gap: 15px;
+}
+
+.overlay-number {
+  font-size: 40px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.15);
+  line-height: 1;
+}
+
+.overlay-title-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.overlay-title {
+  font-size: 26px;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.overlay-category {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--accentColor);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 0;
+  margin-top: 3px;
+}
+
+/* Description */
+.overlay-desc {
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  white-space: pre-line;
+}
+
+/* Tech stack */
+.overlay-tech-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.4);
+  margin: 0;
+  margin-top: 5px;
+}
+
+.overlay-tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 5px;
+}
+
+.overlay-tech-tag {
+  font-size: 13px;
+  font-weight: 500;
+  padding: 4px 12px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  color: #fff;
+}
+
+/* Features */
+.overlay-features-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.4);
+  margin: 0;
+  margin-top: 5px;
+}
+
+.overlay-features {
+  list-style: none;
+  padding: 0;
+  margin: 5px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.overlay-features li {
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.6);
+  padding-left: 16px;
+  position: relative;
+}
+
+.overlay-features li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--accentColor);
+}
+
+/* View Project link */
+.overlay-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  padding: 10px 24px;
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: 0.3s;
+  align-self: flex-start;
+}
+
+.overlay-link:hover {
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.overlay-link-arrow {
+  font-size: 16px;
+  transition: transform 0.3s;
+}
+
+.overlay-link:hover .overlay-link-arrow {
+  transform: translateX(4px);
+}
+
+/* Responsive */
+@media only screen and (max-width: 800px) {
+  .overlay-backdrop {
+    padding: 20px;
+    align-items: flex-start;
+    padding-top: 60px;
+  }
+
+  .overlay-panel {
+    flex-direction: column;
+    padding: 30px;
+    gap: 25px;
+  }
+
+  .overlay-image {
+    width: 100%;
+    max-height: 250px;
+    overflow: hidden;
+  }
+
+  .overlay-image img {
+    object-fit: cover;
+    height: 250px;
+  }
+
+  .overlay-title {
+    font-size: 22px;
+  }
+}

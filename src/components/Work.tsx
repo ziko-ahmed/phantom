@@ -1,5 +1,8 @@
+import { useState } from "react";
 import "./styles/Work.css";
 import WorkImage from "./WorkImage";
+import ProjectOverlay from "./ProjectOverlay";
+import { projectData, Project } from "../data/projectData";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -7,6 +10,8 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(useGSAP);
 
 const Work = () => {
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
   useGSAP(() => {
     let translateX: number = 0;
     let timeline: gsap.core.Timeline;
@@ -113,6 +118,7 @@ const Work = () => {
       }
     };
   }, []);
+
   return (
     <div className="work-section" id="work">
       <div className="work-container section-container">
@@ -120,148 +126,35 @@ const Work = () => {
           My <span>Work</span>
         </h2>
         <div className="work-flex">
-          <div className="work-box">
-            <div className="work-info">
-              <div className="work-title">
-                <h3>01</h3>
-                <div>
-                  <h4>FinanceAI Assistant</h4>
-                  <p>AI/ML</p>
+          {projectData.map((project) => (
+            <div
+              className="work-box"
+              key={project.number}
+              onClick={() => setSelectedProject(project)}
+            >
+              <div className="work-info">
+                <div className="work-title">
+                  <h3>{project.number}</h3>
+                  <div>
+                    <h4>{project.title}</h4>
+                    <p>{project.category}</p>
+                  </div>
                 </div>
+                <h4>Tools and features</h4>
+                <p>{project.techStack.join(", ")}</p>
               </div>
-              <h4>Tools and features</h4>
-              <p>Python, PostgreSQL, Redis, APIs</p>
+              <WorkImage image={project.image} alt={project.title} />
             </div>
-            <WorkImage image="src/assets/images/Rayibot.png" alt="FinanceAI Assistant" />
-          </div>
-          <div className="work-box">
-            <div className="work-info">
-              <div className="work-title">
-                <h3>02</h3>
-                <div>
-                  <h4>ASL Detection</h4>
-                  <p>AI/ML</p>
-                </div>
-              </div>
-              <h4>Tools and features</h4>
-              <p>Python, TensorFlow, OpenCV, MediaPipe</p>
-            </div>
-            <WorkImage image="src/assets/images/ASL.png" alt="ASL Detection" />
-          </div>
-          <div className="work-box">
-            <div className="work-info">
-              <div className="work-title">
-                <h3>03</h3>
-                <div>
-                  <h4>Primetrade</h4>
-                  <p>Web Development</p>
-                </div>
-              </div>
-              <h4>Tools and features</h4>
-              <p>React, Node.js, MongoDB, WebSockets, Tailwind CSS</p>
-            </div>
-            <WorkImage image="src/assets/images/primetrade.png" alt="Primetrade" />
-          </div>
-          <div className="work-box">
-            <div className="work-info">
-              <div className="work-title">
-                <h3>04</h3>
-                <div>
-                  <h4>DRAKZ</h4>
-                  <p>Web Development</p>
-                </div>
-              </div>
-              <h4>Tools and features</h4>
-              <p>MERN Stack, Express, React, Node.js, MongoDB</p>
-            </div>
-            <WorkImage image="src/assets/images/DRAKZ.png" alt="DRAKZ" />
-          </div>
-          <div className="work-box">
-            <div className="work-info">
-              <div className="work-title">
-                <h3>05</h3>
-                <div>
-                  <h4>Movie Recommender</h4>
-                  <p>AI/ML</p>
-                </div>
-              </div>
-              <h4>Tools and features</h4>
-              <p>Python, Streamlit, Pandas, Scikit-learn</p>
-            </div>
-            <WorkImage image="src/assets/images/Movie-Recommender.png" alt="Movie Recommender" />
-          </div>
-          <div className="work-box">
-            <div className="work-info">
-              <div className="work-title">
-                <h3>06</h3>
-                <div>
-                  <h4>Trend Scrapper</h4>
-                  <p>Web Development</p>
-                </div>
-              </div>
-              <h4>Tools and features</h4>
-              <p>Python, BeautifulSoup, Selenium, Pandas</p>
-            </div>
-            <WorkImage image="src/assets/images/trend_scrapper.png" alt="Trend Scrapper" />
-          </div>
-          <div className="work-box">
-            <div className="work-info">
-              <div className="work-title">
-                <h3>07</h3>
-                <div>
-                  <h4>Healthcare Chatbot</h4>
-                  <p>AI/ML</p>
-                </div>
-              </div>
-              <h4>Tools and features</h4>
-              <p>Python, Streamlit, NLP, Scikit-learn</p>
-            </div>
-            <WorkImage image="src/assets/images/HealthBot.png" alt="Healthcare Chatbot" />
-          </div>
-          <div className="work-box">
-            <div className="work-info">
-              <div className="work-title">
-                <h3>08</h3>
-                <div>
-                  <h4>AI vs Human Text Classification</h4>
-                  <p>AI/ML</p>
-                </div>
-              </div>
-              <h4>Tools and features</h4>
-              <p>Python, TensorFlow, Scikit-learn, NLTK</p>
-            </div>
-            <WorkImage image="src/assets/images/AI_vs_Human.png" alt="AI vs Human Text Classification" />
-          </div>
-          <div className="work-box">
-            <div className="work-info">
-              <div className="work-title">
-                <h3>09</h3>
-                <div>
-                  <h4>EI & DS Lab Website</h4>
-                  <p>Web Development</p>
-                </div>
-              </div>
-              <h4>Tools and features</h4>
-              <p>React, Next.js, Tailwind CSS, Vercel</p>
-            </div>
-            <WorkImage image="src/assets/images/EIDS.png" alt="EI & DS Lab Website" />
-          </div>
-          <div className="work-box">
-            <div className="work-info">
-              <div className="work-title">
-                <h3>10</h3>
-                <div>
-                  <h4>Restaurant App</h4>
-                  <p>Web Development</p>
-                </div>
-              </div>
-              <h4>Tools and features</h4>
-              <p>HTML, CSS, JavaScript, React</p>
-            </div>
-            <WorkImage image="src/assets/images/restaurant_app.png" alt="Restaurant App" />
-          </div>
+          ))}
         </div>
       </div>
+
+      {selectedProject && (
+        <ProjectOverlay
+          project={selectedProject}
+          onClose={() => setSelectedProject(null)}
+        />
+      )}
     </div>
   );
 };
