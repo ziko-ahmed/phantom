@@ -14,7 +14,7 @@ export const projectData: Project[] = [
         number: "01",
         title: "FinanceAI Assistant",
         category: "AI/ML",
-        image: "/images/Rayibot.png",
+        image: "/images/images/Rayibot.png",
         link: "https://rayibot.onrender.com",
         description:
             "An intelligent FinanceAI Assistant designed to provide financial insights and support. This chatbot leverages advanced Large Language Models (LLMs) to answer financial queries, analyze data, and offer personalized recommendations.",
@@ -30,7 +30,7 @@ export const projectData: Project[] = [
         number: "02",
         title: "ASL Detection",
         category: "AI/ML",
-        image: "/images/ASL.png",
+        image: "/images/images/ASL.png",
         link: "https://github.com/ziko-ahmed/ASL",
         description:
             "A robust computer vision application that detects and translates American Sign Language (ASL) gestures in real-time. Designed to bridge the communication gap for the deaf and hard of hearing community.",
@@ -46,7 +46,7 @@ export const projectData: Project[] = [
         number: "03",
         title: "Primetrade",
         category: "Web Development",
-        image: "/images/primetrade.png",
+        image: "/images/images/primetrade.png",
         link: "https://primetrade-ua5d.onrender.com/",
         description:
             'A modern, responsive, full-stack task management application with real-time updates, strict role-based access control, and an intuitive Kanban dashboard.\n\nTest Credentials:\nAdmin: "admin@primetrade.com" (pw: "Admin")\nUser 1: "user1@primetrade.com" (pw: "User1")\nUser 2: "user2@primetrade.com" (pw: "User2")',
@@ -62,7 +62,7 @@ export const projectData: Project[] = [
         number: "04",
         title: "DRAKZ",
         category: "Web Development",
-        image: "/images/DRAKZ.png",
+        image: "/images/images/DRAKZ.png",
         link: "https://github.com/ziko-ahmed",
         description:
             'A comprehensive financial portfolio management platform designed to track investments, analyze market trends, and connect users with financial advisors.\n\nTest Credentials:\nAdmin: "admin@drakz.com" (pw: "123456")\nAdvisor: "advisor@drakz.com" (pw: "123456")\nUser: "rich@drakz.com" (pw: "123456")',
@@ -78,7 +78,7 @@ export const projectData: Project[] = [
         number: "05",
         title: "Movie Recommender",
         category: "AI/ML",
-        image: "/images/Movie-Recommender.png",
+        image: "/images/images/Movie-Recommender.png",
         link: "https://ziko-ahmed-movie-recommender.streamlit.app",
         description:
             "A content-based movie recommendation engine that suggests similar movies based on comprehensive metadata including genres, cast, crew, and plot summaries.",
@@ -94,7 +94,7 @@ export const projectData: Project[] = [
         number: "06",
         title: "Trend Scrapper",
         category: "Web Development",
-        image: "/images/trend_scrapper.png",
+        image: "/images/images/trend_scrapper.png",
         link: "https://github.com/ziko-ahmed/Trend-Scrapper",
         description:
             "A web scraping automated tool designed to extract trending topics and data from various social platforms and news outlets to identify current market trends.",
@@ -110,7 +110,7 @@ export const projectData: Project[] = [
         number: "07",
         title: "Healthcare Chatbot",
         category: "AI/ML",
-        image: "/images/HealthBot.png",
+        image: "/images/images/HealthBot.png",
         link: "https://ziko-ahmed-healthbot.streamlit.app",
         description:
             "An interactive healthcare chatbot aimed at providing preliminary medical information and guiding users. It utilizes Natural Language Processing to understand patient symptoms and inquiries.",
@@ -126,7 +126,7 @@ export const projectData: Project[] = [
         number: "08",
         title: "AI vs Human Text Classification",
         category: "AI/ML",
-        image: "/images/AI_vs_Human.png",
+        image: "/images/images/AI_vs_Human.png",
         link: "https://github.com/ziko-ahmed/AI-v-s-Human-Text-Classification",
         description:
             "A predictive modeling tool developed to distinguish between human-written and AI-generated text. This project explores advanced NLP techniques to analyze linguistic patterns and anomalies.",
@@ -142,7 +142,7 @@ export const projectData: Project[] = [
         number: "09",
         title: "EI & DS Lab Website",
         category: "Web Development",
-        image: "/images/EIDS.png",
+        image: "/images/images/EIDS.png",
         link: "https://eids-lab.vercel.app",
         description:
             "The official website for the Embedded Intelligence and Data Systems (EI & DS) Lab at IIIT Sri City. Built to showcase research, publications, and lab members dynamically.",
@@ -158,7 +158,7 @@ export const projectData: Project[] = [
         number: "10",
         title: "Restaurant App",
         category: "Web Development",
-        image: "/images/restaurant_app.png",
+        image: "/images/images/restaurant_app.png",
         link: "https://github.com/ziko-ahmed/Restaurant-App",
         description:
             "A fully functional restaurant management and online ordering application featuring a dynamic menu, cart system, and order tracking.",
