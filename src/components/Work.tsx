@@ -47,14 +47,7 @@ const Work = () => {
       // We need to move enough so all boxes fit within the visible area
       translateX = Math.max(0, totalBoxWidth - (flexClientWidth + flexPaddingLeft + flexPaddingRight));
 
-      console.log("Work scroll calculation (box-by-box):", {
-        totalBoxWidth,
-        flexClientWidth,
-        flexPaddingLeft,
-        flexPaddingRight,
-        translateX,
-        boxCount: boxes.length,
-      });
+
     }
 
     function createTimeline() {
@@ -67,7 +60,6 @@ const Work = () => {
       setTranslateX();
 
       if (translateX <= 0) {
-        console.log("No horizontal scroll needed");
         return;
       }
 
@@ -80,9 +72,7 @@ const Work = () => {
           pin: true,
           invalidateOnRefresh: true,
           id: "work",
-          onUpdate: (self) => {
-            console.log("ScrollTrigger progress:", self.progress, "translateX:", translateX);
-          },
+
         },
       });
 
