@@ -101,6 +101,9 @@ const WhatIDo = () => {
                 <div className="what-tags">TensorFlow</div>
                 <div className="what-tags">PyTorch</div>
                 <div className="what-tags">Scikit-learn</div>
+                <div className="what-tags">LangChain</div>
+                <div className="what-tags">RAG</div>
+                <div className="what-tags">Hugging Face</div>
                 <div className="what-tags">NLP</div>
                 <div className="what-tags">Computer Vision</div>
                 <div className="what-tags">Pandas</div>
@@ -144,9 +147,12 @@ const WhatIDo = () => {
                 <div className="what-tags">Flutter</div>
                 <div className="what-tags">React</div>
                 <div className="what-tags">Node.js</div>
+                <div className="what-tags">Express</div>
+                <div className="what-tags">FastAPI</div>
                 <div className="what-tags">SQL</div>
                 <div className="what-tags">MongoDB</div>
                 <div className="what-tags">PostgreSQL</div>
+                <div className="what-tags">Redis</div>
               </div>
             </div>
           </div>

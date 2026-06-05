@@ -20,7 +20,7 @@ const Career = () => {
               </div>
               <div>
                 <h3>2026</h3>
-                <h5>Jan - Present</h5>
+                <h5>Jan - April</h5>
               </div>
             </div>
             <p>
@@ -34,8 +34,8 @@ const Career = () => {
                 <h5>Edge Intelligence and Distributed Systems Lab at IIIT Sri City</h5>
               </div>
                <div>
-                <h3>2025</h3>
-                <h5>Dec - Present</h5>
+                <h3>2026</h3>
+                <h5>Dec - May</h5>
               </div>
             </div>
             <p>
@@ -49,12 +49,12 @@ const Career = () => {
                 <h5>GDG IIIT Sri City</h5>
               </div>
               <div>
-                <h3>2025</h3>
-                <h5>Aug - Present</h5>
+                <h3>2026</h3>
+                <h5>Aug '25 - July</h5>
               </div>
             </div>
             <p>
-              Spearheaded technical development for the chapter by mentoring 50+ members through hands-on workshops, driving a 20% increase in deployed applications.
+              Spearheaded technical development for the chapter by mentoring 100+ members through hands-on workshops, driving a 20% increase in deployed applications and fostering a culture of open-source contribution.
             </p>
           </div>
           <div className="career-info-box">
