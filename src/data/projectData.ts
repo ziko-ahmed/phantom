@@ -10,38 +10,7 @@ export interface Project {
 }
 
 export const projectData: Project[] = [
-    {
-        number: "11",
-        title: "Medical Dispatch Agentic Workflow",
-        category: "AI/ML",
-        image: "/images/images/medical-workflow.png",
-        link: "https://huggingface.co/ziko-ahmed",
-        description:
-            "Designed a medical dispatch workflow utilizing the Whisper API to transcribe WhatsApp voice notes and an LLM pipeline to generate and structure critical medical JSON data.",
-        techStack: ["Python", "Whisper API", "Hugging Face", "LLMs"],
-        features: [
-            "Voice note transcription using OpenAI Whisper.",
-            "Automated parsing into structured JSON data.",
-            "LLM-based medical terminology extraction.",
-            "Deployed securely for real-world testing.",
-        ],
-    },
-    {
-        number: "12",
-        title: "Real-Time Collaborative Code Editor",
-        category: "Web Development",
-        image: "/images/images/code-editor.png",
-        link: "https://github.com/ziko-ahmed",
-        description:
-            "A real-time collaborative code editor and compiler using Socket.IO and Redis, enabling multi-user concurrent editing with sub-50 ms sync latency and secure multi-language code execution.",
-        techStack: ["JavaScript", "Python", "Java", "C++", "Socket.IO", "Redis"],
-        features: [
-            "Real-time concurrent editing with sub-50 ms latency.",
-            "Secure multi-language execution environments.",
-            "Instant output streaming via REST APIs.",
-            "Scalable backend with Node.js and Redis caching.",
-        ],
-    },
+
     {
         number: "01",
         title: "FinanceAI Assistant",
@@ -200,6 +169,38 @@ export const projectData: Project[] = [
             "State management for handling the shopping cart and checkout flow.",
             "Responsive design adapted for mobile and desktop screens.",
             "Simulated backend API integration for order processing.",
+        ],
+    },
+    {
+        number: "11",
+        title: "Medical Dispatch Agentic Workflow",
+        category: "AI/ML",
+        image: "/images/images/medical-workflow.png",
+        link: "https://huggingface.co/spaces/ziko-ahmed/med_dispatch-v0",
+        description:
+            "Designed a medical dispatch workflow utilizing the Whisper API to transcribe WhatsApp voice notes and an LLM pipeline to generate and structure critical medical JSON data.",
+        techStack: ["Python", "Whisper API", "Hugging Face", "LLMs"],
+        features: [
+            "Voice note transcription using OpenAI Whisper.",
+            "Automated parsing into structured JSON data.",
+            "LLM-based medical terminology extraction.",
+            "Deployed securely for real-world testing.",
+        ],
+    },
+    {
+        number: "12",
+        title: "Real-Time Collaborative Code Editor",
+        category: "Web Development",
+        image: "/images/images/code-editor.png",
+        link: "https://codesync-pro-k4qk.onrender.com",
+        description:
+            "A real-time collaborative code editor and compiler using Socket.IO and Redis, enabling multi-user concurrent editing with sub-50 ms sync latency and secure multi-language code execution.",
+        techStack: ["JavaScript", "Python", "Java", "C++", "Socket.IO", "Redis"],
+        features: [
+            "Real-time concurrent editing with sub-50 ms latency.",
+            "Secure multi-language execution environments.",
+            "Instant output streaming via REST APIs.",
+            "Scalable backend with Node.js and Redis caching.",
         ],
     },
 ];
